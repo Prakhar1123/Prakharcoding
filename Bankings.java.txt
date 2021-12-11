@@ -1,0 +1,30 @@
+package com.prakhar.coding;
+import java.util.Scanner;
+
+public class Bankings {
+	private double bankbalance;
+//	Scanner sc=new Scanner(System.in);
+	public Bankings() {
+		bankbalance=0.0;
+	}
+	
+	public void deposit(double amount) {
+		bankbalance=bankbalance+amount;
+		
+	}
+	
+	public void withdraw(double amount) {
+		if(amount<=bankbalance) {
+		bankbalance=bankbalance-amount;
+	}
+		else {
+			System.err.println("Transaction failed due to insufficient balance");
+		}
+	}	
+	public double getBalance() {
+		return bankbalance;
+	}
+
+	
+
+}
